@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordian Component</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .container {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .item {
+        /* background-color: black; */
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        row-gap: 32px;
+        column-gap: 24px;
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+      }
+
+      .number {
+        font-size: 24px;
+        font-weight: 500;
+        color: #ced4da;
+      }
+
+      .question {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .icon {
+        height: 24px;
+        width: 24px;
+      }
+
+      .down {
+      }
+
+      .text-box {
+        grid-column: 2/3;
+        display: none;
+      }
+
+      .text-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .text-box--list {
+        color: #868e96;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .text-box--list-point {
+      }
+
+      .item.open {
+        border-top: 4px solid #087f5b;
+      }
+
+      .open .text-box {
+        display: block;
+      }
+
+      .open .number,
+      .open .question {
+        color: #087f5b;
+      }
+
+      .open .down {
+        stroke: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item--1">
+        <span class="number">01</span>
+        <p class="question">Where are these chairs assembled?</p>
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="text-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            illum aut fuga perspiciatis cum fugit pariatur. Temporibus accusamus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            minima
+          </p>
+
+          <ul class="text-box--list">
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore,
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing fdsjl.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item item--2 open">
+        <span class="number">02</span>
+        <p class="question">How long do I have to return my chair?</p>
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="text-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            illum aut fuga perspiciatis cum fugit pariatur. Temporibus accusamus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+          </p>
+
+          <ul class="text-box--list">
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore,
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing fdsjl.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item item--3">
+        <span class="number">03</span>
+        <p class="question">Do you ship to countries outside the EU?</p>
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+        <div class="text-box">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            illum aut fuga perspiciatis cum fugit pariatur. Temporibus accusamus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            minima voluptates
+          </p>
+
+          <ul class="text-box--list">
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore,
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing
+            </li>
+
+            <li class="text-box--list-point">
+              Lorem ipsum, dolor sit amet consectetur adipisicing fdsjl.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
